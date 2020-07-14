@@ -1,8 +1,14 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const keys = require('/config/keys');
+const { mongoURI } = require('./config/keys');
 require('./services/passport');
 
 
-const app = express();
+mongoose.connect('mongodb+srv://dahymond:<password>@survey.mfttu.mongodb.net/<dbname>?retryWrites=true&w=majority');
+
+
+const app = express(mongoURI);
 
 require('./routes/authRoutes')(app);
 
