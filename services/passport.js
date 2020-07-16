@@ -11,7 +11,7 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser((id, done) =>{
   User.findById(id).then(user => {
-    mdone(null, user);
+    done(null, user);
     });
 });
 
