@@ -1,0 +1,1 @@
+exportconst FETCH_USER  = 'fetch_user';
